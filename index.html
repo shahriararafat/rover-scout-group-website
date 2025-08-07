@@ -3,40 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crystal's Den - Scout Group</title>
+    <title>Name - Scout Group</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
-            background-color: #4A90E2;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23ffffff' fill-opacity='0.1'/%3E%3C/svg%3E");
-        }
-        .wavy-bg {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%234A90E2' fill-opacity='1' d='M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,138.7C672,128,768,160,864,186.7C960,213,1056,235,1152,218.7C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: bottom;
-            background-size: cover;
-        }
-        .wavy-bg-top {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f7fafc' fill-opacity='1' d='M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,138.7C672,128,768,160,864,186.7C960,213,1056,235,1152,218.7C1248,203,1344,149,1392,122.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: top;
-            background-size: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body class="bg-gray-50">
 
-    <!-- Header Section -->
     <header class="bg-[#4A90E2] text-white fixed w-full z-10 shadow-md">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold">Crystal's Den</a>
+            <a href="#" class="text-2xl font-bold">Rover Scout</a>
             <nav class="hidden md:flex space-x-8 items-center">
                 <a href="#" class="hover:text-yellow-300">Home</a>
                 <a href="#" class="hover:text-yellow-300">About</a>
+                <a href="./Pages/crew-council.html" class="hover:text-yellow-300">Crew Council</a>
                 <a href="#" class="hover:text-yellow-300">Gallery</a>
                 <a href="#" class="hover:text-yellow-300">Contact</a>
                 <a href="#" class="bg-yellow-400 text-blue-800 font-semibold px-4 py-2 rounded-full hover:bg-yellow-500 transition duration-300">Join Us</a>
@@ -45,7 +25,6 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="#" class="block py-2 hover:text-yellow-300">Home</a>
             <a href="#" class="block py-2 hover:text-yellow-300">About</a>
@@ -55,77 +34,69 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-bg pt-32 pb-20 text-white">
-        <div class="container mx-auto px-6 text-center md:text-left">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2">
-                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Welcome to <span class="text-yellow-300">Crystal's Den</span></h1>
-                    <p class="mt-4 text-lg">Apnar scouting anonder shurur sthan.</p>
-                    <button class="mt-8 bg-yellow-400 text-blue-800 font-bold py-3 px-8 rounded-full hover:bg-yellow-500 transition duration-300 transform hover:scale-105">Get Started</button>
-                </div>
-                <div class="md:w-1/2 mt-10 md:mt-0">
-                    <img src="https://placehold.co/600x400/4A90E2/FFFFFF?text=Scout+Camp+Illustration" alt="Scout Camp Illustration" class="rounded-lg shadow-2xl mx-auto">
-                </div>
+    <section class="hero-bg text-white flex flex-col justify-center items-center">
+    <div class="container mx-auto px-6 text-center md:text-left">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Welcome to <span class="text-yellow-300">Rover Scout Group</span></h1>
+                <p class="mt-4 text-lg">One Of the best scout groups in Bangladesh.</p>
+                <button class="mt-8 bg-yellow-400 text-blue-800 font-bold py-3 px-8 rounded-full hover:bg-yellow-500 transition duration-300 transform hover:scale-105">Contact Us</button>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0">
+                <img src="./assets/images/camp.png" alt="Scout Camp Illustration" class="rounded-lg shadow-2xl mx-auto">
             </div>
         </div>
-    </section>
-    
-    <div class="wavy-bg-top h-32 md:h-48"></div>
+    </div>
+</section>
 
-    <!-- About Us Section -->
+    <!-- <div class="wavy-bg-top h-32 md:h-48"></div> -->
+
     <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
                 <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition duration-300">
                     <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Amra ke?</h3>
-                    <p class="text-gray-600">Amra ekdol utshahi scout jara prokriti o shomajer shebay niyojito.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Who we are?</h3>
+                    <p class="text-gray-600">We are a dedicated scout group committed to building character, leadership, and a spirit of service in young individuals.</p>
                 </div>
-                <!-- Card 2 -->
                 <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition duration-300">
                     <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Amader Mission</h3>
-                    <p class="text-gray-600">Juboshomajke dayittoshil nagorik hishebe gore tola.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Our Mission</h3>
+                    <p class="text-gray-600">Our mission is to empower youth through adventure, education, and community service, shaping them into responsible and confident citizens.</p>
                 </div>
-                <!-- Card 3 -->
                 <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition duration-300">
                     <div class="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Amader Itihash</h3>
-                    <p class="text-gray-600">Got 10 bochor dhore amra scouting andolone obodan rekhe aschi.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Our vision</h3>
+                    <p class="text-gray-600">Our vision is to create a generation of compassionate, skilled, and resilient leaders who contribute positively to their communities and the world.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- What we do Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Amra ki kori?</h2>
-                <p class="text-gray-600 mt-2">Amader bivinno karjokrom shomporke janun.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Activities</h2>
             </div>
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
                     <img src="https://placehold.co/600x400/E2E8F0/333333?text=Scout+Activities" alt="Scout Activities" class="rounded-lg shadow-xl">
                 </div>
                 <div class="md:w-1/2">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Amader Karjokrom</h3>
-                    <p class="text-gray-600 mb-4">Amra niyoito camping, hiking, community service, first aid proshikkhon ebong netritto bikashmulok workshop ayojon kori. Ei shob karjokromer maddhome scout-ra dolio kaaj, somossar shomadhan ebong poribesh shochetonota shomporke shekhe.</p>
-                    <a href="#" class="text-blue-600 font-semibold hover:underline">Aro Janun &rarr;</a>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Annual Scout Camp</h3>
+                    <p class="text-gray-600 mb-4">Every year, our scout group organizes an exciting Annual Scout Camp where members explore nature, learn survival skills, and build teamwork through outdoor activities. The camp includes hiking, campfire sessions, leadership workshops, and community service projects. It’s a chance for scouts to challenge themselves, make lifelong friendships, and experience personal growth in a fun, safe, and adventurous environment.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">Know More &rarr;</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Founder Section -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-12">
@@ -133,8 +104,8 @@
                     <img src="https://placehold.co/400x500/CCCCCC/333333?text=Founder's+Portrait" alt="Founder" class="rounded-lg shadow-xl">
                 </div>
                 <div class="md:w-3/5">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Amader Protishthata</h3>
-                    <p class="text-gray-600 mb-6">Lord Baden-Powell er adorshe onuprenito hoye amader dol protishthito. Tar dekhano pothei amra hete choli ebong scouting er mulniti gulo mene cholar chesta kori.</p>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Founder of Scouting</h3>
+                    <p class="text-gray-600 mb-6">Inspired by the ideals of Lord Baden-Powell, our scout group began its journey. We follow the path he showed and strive to uphold the core principles of scouting.</p>
                     <div class="grid grid-cols-2 gap-4">
                         <img src="https://placehold.co/300x200/E2E8F0/333333?text=Early+Days" class="rounded-lg shadow-md" alt="Old photo 1">
                         <img src="https://placehold.co/300x200/E2E8F0/333333?text=First+Camp" class="rounded-lg shadow-md" alt="Old photo 2">
@@ -144,123 +115,109 @@
         </div>
     </section>
 
-    <!-- Stats Banner -->
     <section class="bg-blue-600 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div>
-                    <h4 class="text-4xl font-bold">10+</h4>
-                    <p class="mt-2">Bochorer Obhiggota</p>
+                    <h4 class="text-4xl font-bold">15</h4>
+                    <p class="mt-2">Years Journey</p>
                 </div>
                 <div>
-                    <h4 class="text-4xl font-bold">500+</h4>
-                    <p class="mt-2">Shodossho</p>
+                    <h4 class="text-4xl font-bold">200+</h4>
+                    <p class="mt-2">Members</p>
                 </div>
                 <div>
-                    <h4 class="text-4xl font-bold">100+</h4>
+                    <h4 class="text-4xl font-bold">50+</h4>
                     <p class="mt-2">Successful Camp</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Services Section -->
+
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Amader Program</h2>
-                <p class="text-gray-600 mt-2">Apnar jonno shothik programti beche nin.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Rover stages</h2>
+                <p class="text-gray-600 mt-2"></p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Program Card -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-                    <img src="https://placehold.co/200x150/4CAF50/FFFFFF?text=Cub+Scout" class="mx-auto mb-4 rounded">
-                    <h3 class="font-bold text-lg">Cub Scout</h3>
-                    <p class="text-sm text-gray-600 mt-2">6-10 bochor boishider jonno.</p>
+                    <img src="https://placehold.co/200x150/4CAF50/FFFFFF?text=Squire+Stage" class="mx-auto mb-4 rounded">
+                    <h3 class="font-bold text-lg">Squire Stage</h3>
+                    <p class="text-sm text-gray-600 mt-2">Initial 3-month probation period before becoming a full Rover.</p>
                 </div>
-                <!-- Program Card -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-                    <img src="https://placehold.co/200x150/2196F3/FFFFFF?text=Scout" class="mx-auto mb-4 rounded">
-                    <h3 class="font-bold text-lg">Scout</h3>
-                    <p class="text-sm text-gray-600 mt-2">11-17 bochor boishider jonno.</p>
+                    <img src="https://placehold.co/200x150/2196F3/FFFFFF?text=Membership+Stage" class="mx-auto mb-4 rounded">
+                    <h3 class="font-bold text-lg">Membership Stage</h3>
+                    <p class="text-sm text-gray-600 mt-2">After completing 1 year in Rover, eligible for the next stage.</p>
                 </div>
-                <!-- Program Card -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-                    <img src="https://placehold.co/200x150/F44336/FFFFFF?text=Rover+Scout" class="mx-auto mb-4 rounded">
-                    <h3 class="font-bold text-lg">Rover Scout</h3>
-                    <p class="text-sm text-gray-600 mt-2">18-25 bochor boishider jonno.</p>
+                    <img src="https://placehold.co/200x150/F44336/FFFFFF?text=Training+Stage" class="mx-auto mb-4 rounded">
+                    <h3 class="font-bold text-lg">Training Stage</h3>
+                    <p class="text-sm text-gray-600 mt-2">One year of advanced training to develop leadership and skills.</p>
                 </div>
-                 <!-- Program Card -->
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-                    <img src="https://placehold.co/200x150/FF9800/FFFFFF?text=Volunteer" class="mx-auto mb-4 rounded">
-                    <h3 class="font-bold text-lg">Volunteer</h3>
-                    <p class="text-sm text-gray-600 mt-2">Shobar jonno unmukto.</p>
+                 <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <img src="https://placehold.co/200x150/FF9800/FFFFFF?text=Service+Stage" class="mx-auto mb-4 rounded">
+                    <h3 class="font-bold text-lg">Service Stage</h3>
+                    <p class="text-sm text-gray-600 mt-2">Final stage open to all focus on community service and contribution.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery & CTA Section -->
     <section class="bg-blue-50 py-20">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center gap-10">
                 <div class="lg:w-1/2">
                     <h2 class="text-3xl font-bold text-blue-800">It's time to join in the next adventure</h2>
-                    <p class="text-gray-600 mt-4 mb-6">Amader shathe jog din ebong scouting er anondomoy jogote prober korun. Notun bondhu banan, notun dokkhota shikun ebong jiboner jonno sriti toiri korun.</p>
+                    <p class="text-gray-600 mt-4 mb-6">Join us and enter the joyful world of scouting. Make new friends, learn new skills, and create memories for a lifetime.</p>
                     <button class="bg-yellow-400 text-blue-800 font-bold py-3 px-8 rounded-full hover:bg-yellow-500 transition duration-300">Join Now</button>
                 </div>
                 <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                    <img src="https://placehold.co/400x300/A5B4FC/FFFFFF?text=Gallery+1" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    <img src="https://placehold.co/400x300/818CF8/FFFFFF?text=Gallery+2" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 mt-8">
-                    <img src="https://placehold.co/400x300/6366F1/FFFFFF?text=Gallery+3" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    <img src="https://placehold.co/400x300/4F46E5/FFFFFF?text=Gallery+4" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 mt-8">
+                    <img src="./assets/images/photo-1.png" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/images/photo-2.png" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 mt-8">
+                    <img src="./assets/images/photo-3.png" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="./assets/images/photo-4.png" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 mt-8">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mentors Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Amader Mentor-ra</h2>
-                <p class="text-gray-600 mt-2">Jader obhiggota amader pother alo.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Group Committee</h2>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                <!-- Mentor Card -->
                 <div class="text-center">
-                    <img src="https://placehold.co/150x150/E0E0E0/333333?text=Mentor" class="w-32 h-32 rounded-full mx-auto shadow-lg">
-                    <h4 class="mt-4 font-bold text-lg">John Doe</h4>
-                    <p class="text-gray-500">Chief Mentor</p>
+                    <img src="https://placehold.co/150x150/E0E0E0/333333?text=Chairman" class="w-32 h-32 rounded-full mx-auto shadow-lg">
+                    <h4 class="mt-4 font-bold text-lg">Name</h4>
+                    <p class="text-gray-500">Chairman</p>
                 </div>
-                <!-- Mentor Card -->
                 <div class="text-center">
-                    <img src="https://placehold.co/150x150/E0E0E0/333333?text=Mentor" class="w-32 h-32 rounded-full mx-auto shadow-lg">
-                    <h4 class="mt-4 font-bold text-lg">Jane Smith</h4>
-                    <p class="text-gray-500">Rover Leader</p>
+                    <img src="https://placehold.co/150x150/E0E0E0/333333?text=Secretary" class="w-32 h-32 rounded-full mx-auto shadow-lg">
+                    <h4 class="mt-4 font-bold text-lg">Name</h4>
+                    <p class="text-gray-500">Secretary</p>
                 </div>
-                <!-- Mentor Card -->
                 <div class="text-center">
-                    <img src="https://placehold.co/150x150/E0E0E0/333333?text=Mentor" class="w-32 h-32 rounded-full mx-auto shadow-lg">
-                    <h4 class="mt-4 font-bold text-lg">Peter Jones</h4>
-                    <p class="text-gray-500">Scout Leader</p>
+                    <img src="https://placehold.co/150x150/E0E0E0/333333?text=RSL-Rover" class="w-32 h-32 rounded-full mx-auto shadow-lg">
+                    <h4 class="mt-4 font-bold text-lg">Name</h4>
+                    <p class="text-gray-500">RSL-Rover</p>
                 </div>
-                <!-- Mentor Card -->
                 <div class="text-center">
-                    <img src="https://placehold.co/150x150/E0E0E0/333333?text=Mentor" class="w-32 h-32 rounded-full mx-auto shadow-lg">
-                    <h4 class="mt-4 font-bold text-lg">Mary Williams</h4>
-                    <p class="text-gray-500">Cub Leader</p>
+                    <img src="https://placehold.co/150x150/E0E0E0/333333?text=RSL-Girls in Rover" class="w-32 h-32 rounded-full mx-auto shadow-lg">
+                    <h4 class="mt-4 font-bold text-lg">Name</h4>
+                    <p class="text-gray-500">RSL-Girls in Rover</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Videos Section -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Videos</h2>
-                <p class="text-gray-600 mt-2">Amader kichu anondomoy muhurto.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800"> Videos</h2>
+                <p class="text-gray-600 mt-2"></p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="aspect-w-16 aspect-h-9">
@@ -273,13 +230,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="wavy-bg bg-[#2c3e50] text-white pt-32 pb-8">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <h5 class="font-bold text-lg mb-4">Crystal's Den</h5>
-                    <p class="text-gray-400">Scouting er anondo, shobar shathe.</p>
+                    <h5 class="font-bold text-lg mb-4">Rover Scouts Group</h5>
+                    <p class="text-gray-400">One of the leading scout groups. We focus on youth development through outdoor activities.....</p>
                 </div>
                 <div>
                     <h5 class="font-bold text-lg mb-4">Quick Links</h5>
@@ -308,19 +264,11 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; 2024 Crystal's Den. All rights reserved.</p>
+                <p>&copy; 2025 Rover Scouts Group. All rights reserved. develop by <a href="https://shahriararafat.ninja/" class="text-gray-400 hover:text-white">Shahriar Arafat</a></p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

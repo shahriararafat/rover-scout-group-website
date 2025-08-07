@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crew Council - Ekattur Open Scout Group</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Hind Siliguri for Bengali & Poppins for English -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Refined Theme: White BG, Blue Cards with better color harmony */
+            --bg-color: #ffffff;
+            --card-bg-color: #4a90e2;
+            --card-text-header: #ffffff; /* For the main name */
+            --card-text-light: #cce4ff; /* A harmonious light blue for subtitle */
+            --card-group-name: #ffffff; /* Clean white for the group name */
+            --card-role-text: #f1c40f;  /* A nice gold/yellow for the role */
+            --card-border-color: #3498db; 
+            --page-header-text: #2c3e50;
+            --page-subheader-text: #34495e;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', 'Poppins', sans-serif;
+            background-color: var(--bg-color); /* Solid white background */
+            background-attachment: fixed;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .page-header .logo {
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+        .page-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 2.5rem;
+            color: var(--page-header-text);
+        }
+        .page-header p {
+            font-size: 1.125rem;
+            color: var(--page-subheader-text);
+        }
+
+        /* --- The Profile Card --- */
+        .scout-card {
+            background-color: var(--card-bg-color);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 20px -5px rgba(74, 144, 226, 0.4);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--card-border-color);
+        }
+        
+        .scout-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px -10px rgba(74, 144, 226, 0.6);
+        }
+
+        /* --- Card Header with Logos --- */
+        .card-top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .card-top-header .group-name {
+            font-weight: 700;
+            color: var(--card-group-name); /* UPDATED */
+            font-size: 1rem;
+            text-align: center;
+        }
+        .card-top-header .logo-icon {
+            height: 40px;
+            width: 40px; 
+            object-fit: contain;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            padding: 4px;
+        }
+
+        /* --- Image with Custom Shape --- */
+        .image-container-v2 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .image-wrapper-v2 {
+            width: 170px;
+            height: 170px;
+            -webkit-clip-path: url(#scout-shape);
+            clip-path: url(#scout-shape);
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px;
+        }
+        .profile-image-v2 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            -webkit-clip-path: url(#scout-shape);
+            clip-path: url(#scout-shape);
+        }
+
+        /* --- Text Content --- */
+        .member-name-v3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--card-text-header); /* UPDATED */
+            line-height: 1.3;
+        }
+        .member-role-v3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--card-role-text); /* UPDATED */
+            margin-top: 0.25rem;
+        }
+        .member-role-sub-v3 {
+             font-size: 0.9rem;
+             color: var(--card-text-light); /* UPDATED */
+             font-family: 'Poppins', sans-serif;
+        }
+        
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- SVG Clip Path Definition for the image shape -->
+    <svg width="0" height="0">
+        <defs>
+            <clipPath id="scout-shape" clipPathUnits="objectBoundingBox">
+                <path d="M0.5,0 C0.85,0,1,0.15,1,0.5 C1,0.85,0.85,1,0.5,1 C0.15,1,0,0.85,0,0.5 C0,0.15,0.15,0,0.5,0 Z" transform="scale(0.98 1) translate(0.01 0)"></path>
+            </clipPath>
+        </defs>
+    </svg>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- Page Header -->
+        <div class="page-header">
+            <img src="https://i.imgur.com/wJ4xG9g.png" alt="Ekattur Open Scout Group Logo" class="logo mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/100x100/ff0000/ffffff?text=Logo+Error';">
+            <h1>একাত্তর মুক্ত রোভার স্কাউট গ্রুপ</h1>
+            <p>ক্রু কাউন্সিল</p>
+        </div>
+
+        <!-- Members Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Member Card 1 -->
+            <div class="scout-card">
+                <div class="card-content">
+                    <div class="card-top-header">
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                        <div class="group-name flex-grow">একাত্তর মুক্ত</div>
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                    </div>
+                    <div class="image-container-v2"><div class="image-wrapper-v2"><img src="https://placehold.co/200x200/e2e8f0/1f2937?text=Tanvir" class="profile-image-v2" alt="তানভীর মাহমুদ নওশীন এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"></div></div>
+                    <div class="text-center"><h3 class="member-name-v3">তানভীর মাহমুদ নওশীন</h3><p class="member-role-v3">সভাপতি</p><p class="member-role-sub-v3">Crew Council</p></div>
+                </div>
+            </div>
+
+            <!-- Member Card 2 -->
+            <div class="scout-card">
+                <div class="card-content">
+                    <div class="card-top-header">
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                        <div class="group-name flex-grow">একাত্তর মুক্ত</div>
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                    </div>
+                    <div class="image-container-v2"><div class="image-wrapper-v2"><img src="https://placehold.co/200x200/e2e8f0/1f2937?text=Ishrat" class="profile-image-v2" alt="ইশরাত জাহান ঐশী এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"></div></div>
+                    <div class="text-center"><h3 class="member-name-v3">ইশরাত জাহান ঐশী</h3><p class="member-role-v3">সহ-সভাপতি</p><p class="member-role-sub-v3">Crew Council</p></div>
+                </div>
+            </div>
+            
+            <!-- Member Card 3 -->
+            <div class="scout-card">
+                <div class="card-content">
+                    <div class="card-top-header">
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                        <div class="group-name flex-grow">একাত্তর মুক্ত</div>
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                    </div>
+                    <div class="image-container-v2"><div class="image-wrapper-v2"><img src="https://placehold.co/200x200/e2e8f0/1f2937?text=Abdullah" class="profile-image-v2" alt="মোঃ আব্দুল্লাহ আল মামুন এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"></div></div>
+                    <div class="text-center"><h3 class="member-name-v3">মোঃ আব্দুল্লাহ আল মামুন</h3><p class="member-role-v3">সম্পাদক</p><p class="member-role-sub-v3">Crew Council</p></div>
+                </div>
+            </div>
+            
+            <!-- Member Card 4 -->
+            <div class="scout-card">
+                <div class="card-content">
+                    <div class="card-top-header">
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                        <div class="group-name flex-grow">একাত্তর মুক্ত</div>
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                    </div>
+                    <div class="image-container-v2"><div class="image-wrapper-v2"><img src="https://placehold.co/200x200/e2e8f0/1f2937?text=Karimul" class="profile-image-v2" alt="করিমুল ইসলাম এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"></div></div>
+                    <div class="text-center"><h3 class="member-name-v3">করিমুল ইসলাম</h3><p class="member-role-v3">কোষাধ্যক্ষ</p><p class="member-role-sub-v3">Crew Council</p></div>
+                </div>
+            </div>
+
+            <!-- Member Card 5 -->
+            <div class="scout-card">
+                <div class="card-content">
+                    <div class="card-top-header">
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                        <div class="group-name flex-grow">একাত্তর মুক্ত</div>
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                    </div>
+                    <div class="image-container-v2"><div class="image-wrapper-v2"><img src="https://placehold.co/200x200/e2e8f0/1f2937?text=Sadia" class="profile-image-v2" alt="সাদিয়া আফরিন এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"></div></div>
+                    <div class="text-center"><h3 class="member-name-v3">সাদিয়া আফরিন</h3><p class="member-role-v3">সদস্য</p><p class="member-role-sub-v3">Crew Council</p></div>
+                </div>
+            </div>
+
+            <!-- Member Card 6 -->
+            <div class="scout-card">
+                <div class="card-content">
+                    <div class="card-top-header">
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                        <div class="group-name flex-grow">একাত্তর মুক্ত</div>
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                    </div>
+                    <div class="image-container-v2"><div class="image-wrapper-v2"><img src="https://placehold.co/200x200/e2e8f0/1f2937?text=Rakib" class="profile-image-v2" alt="রাকিবুল হাসান এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"></div></div>
+                    <div class="text-center"><h3 class="member-name-v3">রাকিবুল হাসান</h3><p class="member-role-v3">সদস্য</p><p class="member-role-sub-v3">Crew Council</p></div>
+                </div>
+            </div>
+
+            <!-- Member Card 7 -->
+            <div class="scout-card">
+                <div class="card-content">
+                    <div class="card-top-header">
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                        <div class="group-name flex-grow">একাত্তর মুক্ত</div>
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                    </div>
+                    <div class="image-container-v2"><div class="image-wrapper-v2"><img src="https://placehold.co/200x200/e2e8f0/1f2937?text=Fahima" class="profile-image-v2" alt="ফাহিমা আক্তার এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"></div></div>
+                    <div class="text-center"><h3 class="member-name-v3">ফাহিমা আক্তার</h3><p class="member-role-v3">সদস্য</p><p class="member-role-sub-v3">Crew Council</p></div>
+                </div>
+            </div>
+
+            <!-- Member Card 8 -->
+            <div class="scout-card">
+                <div class="card-content">
+                    <div class="card-top-header">
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                        <div class="group-name flex-grow">একাত্তর মুক্ত</div>
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                    </div>
+                    <div class="image-container-v2"><div class="image-wrapper-v2"><img src="https://placehold.co/200x200/e2e8f0/1f2937?text=Mahfuz" class="profile-image-v2" alt="মাহফুজ রহমান এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"></div></div>
+                    <div class="text-center"><h3 class="member-name-v3">মাহফুজ রহমান</h3><p class="member-role-v3">সদস্য</p><p class="member-role-sub-v3">Crew Council</p></div>
+                </div>
+            </div>
+
+            <!-- Member Card 9 -->
+            <div class="scout-card">
+                <div class="card-content">
+                    <div class="card-top-header">
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                        <div class="group-name flex-grow">একাত্তর মুক্ত</div>
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                    </div>
+                    <div class="image-container-v2"><div class="image-wrapper-v2"><img src="https://placehold.co/200x200/e2e8f0/1f2937?text=Nadia" class="profile-image-v2" alt="নাদিয়া সুলতানা এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"></div></div>
+                    <div class="text-center"><h3 class="member-name-v3">নাদিয়া সুলতানা</h3><p class="member-role-v3">সদস্য</p><p class="member-role-sub-v3">Crew Council</p></div>
+                </div>
+            </div>
+
+            <!-- Member Card 10 -->
+            <div class="scout-card">
+                <div class="card-content">
+                    <div class="card-top-header">
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                        <div class="group-name flex-grow">একাত্তর মুক্ত</div>
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                    </div>
+                    <div class="image-container-v2"><div class="image-wrapper-v2"><img src="https://placehold.co/200x200/e2e8f0/1f2937?text=Imran" class="profile-image-v2" alt="ইমরান হোসেন এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"></div></div>
+                    <div class="text-center"><h3 class="member-name-v3">ইমরান হোসেন</h3><p class="member-role-v3">সদস্য</p><p class="member-role-sub-v3">Crew Council</p></div>
+                </div>
+            </div>
+
+            <!-- Member Card 11 -->
+            <div class="scout-card">
+                <div class="card-content">
+                    <div class="card-top-header">
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                        <div class="group-name flex-grow">একাত্তর মুক্ত</div>
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                    </div>
+                    <div class="image-container-v2"><div class="image-wrapper-v2"><img src="https://placehold.co/200x200/e2e8f0/1f2937?text=Sumaiya" class="profile-image-v2" alt="সুমাইয়া জান্নাত এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"></div></div>
+                    <div class="text-center"><h3 class="member-name-v3">সুমাইয়া জান্নাত</h3><p class="member-role-v3">সদস্য</p><p class="member-role-sub-v3">Crew Council</p></div>
+                </div>
+            </div>
+
+            <!-- Member Card 12 -->
+            <div class="scout-card">
+                <div class="card-content">
+                    <div class="card-top-header">
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                        <div class="group-name flex-grow">একাত্তর মুক্ত</div>
+                        <img src="https://i.imgur.com/wJ4xG9g.png" alt="Scout Logo" class="logo-icon flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=E';">
+                    </div>
+                    <div class="image-container-v2"><div class="image-wrapper-v2"><img src="https://placehold.co/200x200/e2e8f0/1f2937?text=Arif" class="profile-image-v2" alt="আরিফুল ইসলাম এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"></div></div>
+                    <div class="text-center"><h3 class="member-name-v3">আরিফুল ইসলাম</h3><p class="member-role-v3">সদস্য</p><p class="member-role-sub-v3">Crew Council</p></div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 mt-8">
+        <p class="text-gray-500">&copy; 2024 Ekattur Open Scout Group. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
