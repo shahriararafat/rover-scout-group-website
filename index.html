@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal's Den - Scout Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-color: #4A90E2;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23ffffff' fill-opacity='0.1'/%3E%3C/svg%3E");
+        }
+        .wavy-bg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%234A90E2' fill-opacity='1' d='M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,138.7C672,128,768,160,864,186.7C960,213,1056,235,1152,218.7C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+        }
+        .wavy-bg-top {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f7fafc' fill-opacity='1' d='M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,138.7C672,128,768,160,864,186.7C960,213,1056,235,1152,218.7C1248,203,1344,149,1392,122.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header Section -->
+    <header class="bg-[#4A90E2] text-white fixed w-full z-10 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Crystal's Den</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#" class="hover:text-yellow-300">Home</a>
+                <a href="#" class="hover:text-yellow-300">About</a>
+                <a href="#" class="hover:text-yellow-300">Gallery</a>
+                <a href="#" class="hover:text-yellow-300">Contact</a>
+                <a href="#" class="bg-yellow-400 text-blue-800 font-semibold px-4 py-2 rounded-full hover:bg-yellow-500 transition duration-300">Join Us</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#" class="block py-2 hover:text-yellow-300">Home</a>
+            <a href="#" class="block py-2 hover:text-yellow-300">About</a>
+            <a href="#" class="block py-2 hover:text-yellow-300">Gallery</a>
+            <a href="#" class="block py-2 hover:text-yellow-300">Contact</a>
+            <a href="#" class="mt-2 inline-block bg-yellow-400 text-blue-800 font-semibold px-4 py-2 rounded-full hover:bg-yellow-500 transition duration-300">Join Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg pt-32 pb-20 text-white">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Welcome to <span class="text-yellow-300">Crystal's Den</span></h1>
+                    <p class="mt-4 text-lg">Apnar scouting anonder shurur sthan.</p>
+                    <button class="mt-8 bg-yellow-400 text-blue-800 font-bold py-3 px-8 rounded-full hover:bg-yellow-500 transition duration-300 transform hover:scale-105">Get Started</button>
+                </div>
+                <div class="md:w-1/2 mt-10 md:mt-0">
+                    <img src="https://placehold.co/600x400/4A90E2/FFFFFF?text=Scout+Camp+Illustration" alt="Scout Camp Illustration" class="rounded-lg shadow-2xl mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="wavy-bg-top h-32 md:h-48"></div>
+
+    <!-- About Us Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Amra ke?</h3>
+                    <p class="text-gray-600">Amra ekdol utshahi scout jara prokriti o shomajer shebay niyojito.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                       <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Amader Mission</h3>
+                    <p class="text-gray-600">Juboshomajke dayittoshil nagorik hishebe gore tola.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Amader Itihash</h3>
+                    <p class="text-gray-600">Got 10 bochor dhore amra scouting andolone obodan rekhe aschi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What we do Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Amra ki kori?</h2>
+                <p class="text-gray-600 mt-2">Amader bivinno karjokrom shomporke janun.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/E2E8F0/333333?text=Scout+Activities" alt="Scout Activities" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Amader Karjokrom</h3>
+                    <p class="text-gray-600 mb-4">Amra niyoito camping, hiking, community service, first aid proshikkhon ebong netritto bikashmulok workshop ayojon kori. Ei shob karjokromer maddhome scout-ra dolio kaaj, somossar shomadhan ebong poribesh shochetonota shomporke shekhe.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">Aro Janun &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                 <div class="md:w-2/5">
+                    <img src="https://placehold.co/400x500/CCCCCC/333333?text=Founder's+Portrait" alt="Founder" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-3/5">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Amader Protishthata</h3>
+                    <p class="text-gray-600 mb-6">Lord Baden-Powell er adorshe onuprenito hoye amader dol protishthito. Tar dekhano pothei amra hete choli ebong scouting er mulniti gulo mene cholar chesta kori.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://placehold.co/300x200/E2E8F0/333333?text=Early+Days" class="rounded-lg shadow-md" alt="Old photo 1">
+                        <img src="https://placehold.co/300x200/E2E8F0/333333?text=First+Camp" class="rounded-lg shadow-md" alt="Old photo 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="bg-blue-600 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <h4 class="text-4xl font-bold">10+</h4>
+                    <p class="mt-2">Bochorer Obhiggota</p>
+                </div>
+                <div>
+                    <h4 class="text-4xl font-bold">500+</h4>
+                    <p class="mt-2">Shodossho</p>
+                </div>
+                <div>
+                    <h4 class="text-4xl font-bold">100+</h4>
+                    <p class="mt-2">Successful Camp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Amader Program</h2>
+                <p class="text-gray-600 mt-2">Apnar jonno shothik programti beche nin.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Program Card -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <img src="https://placehold.co/200x150/4CAF50/FFFFFF?text=Cub+Scout" class="mx-auto mb-4 rounded">
+                    <h3 class="font-bold text-lg">Cub Scout</h3>
+                    <p class="text-sm text-gray-600 mt-2">6-10 bochor boishider jonno.</p>
+                </div>
+                <!-- Program Card -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <img src="https://placehold.co/200x150/2196F3/FFFFFF?text=Scout" class="mx-auto mb-4 rounded">
+                    <h3 class="font-bold text-lg">Scout</h3>
+                    <p class="text-sm text-gray-600 mt-2">11-17 bochor boishider jonno.</p>
+                </div>
+                <!-- Program Card -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <img src="https://placehold.co/200x150/F44336/FFFFFF?text=Rover+Scout" class="mx-auto mb-4 rounded">
+                    <h3 class="font-bold text-lg">Rover Scout</h3>
+                    <p class="text-sm text-gray-600 mt-2">18-25 bochor boishider jonno.</p>
+                </div>
+                 <!-- Program Card -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <img src="https://placehold.co/200x150/FF9800/FFFFFF?text=Volunteer" class="mx-auto mb-4 rounded">
+                    <h3 class="font-bold text-lg">Volunteer</h3>
+                    <p class="text-sm text-gray-600 mt-2">Shobar jonno unmukto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery & CTA Section -->
+    <section class="bg-blue-50 py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-blue-800">It's time to join in the next adventure</h2>
+                    <p class="text-gray-600 mt-4 mb-6">Amader shathe jog din ebong scouting er anondomoy jogote prober korun. Notun bondhu banan, notun dokkhota shikun ebong jiboner jonno sriti toiri korun.</p>
+                    <button class="bg-yellow-400 text-blue-800 font-bold py-3 px-8 rounded-full hover:bg-yellow-500 transition duration-300">Join Now</button>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="https://placehold.co/400x300/A5B4FC/FFFFFF?text=Gallery+1" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/400x300/818CF8/FFFFFF?text=Gallery+2" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 mt-8">
+                    <img src="https://placehold.co/400x300/6366F1/FFFFFF?text=Gallery+3" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://placehold.co/400x300/4F46E5/FFFFFF?text=Gallery+4" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 mt-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentors Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Amader Mentor-ra</h2>
+                <p class="text-gray-600 mt-2">Jader obhiggota amader pother alo.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Mentor Card -->
+                <div class="text-center">
+                    <img src="https://placehold.co/150x150/E0E0E0/333333?text=Mentor" class="w-32 h-32 rounded-full mx-auto shadow-lg">
+                    <h4 class="mt-4 font-bold text-lg">John Doe</h4>
+                    <p class="text-gray-500">Chief Mentor</p>
+                </div>
+                <!-- Mentor Card -->
+                <div class="text-center">
+                    <img src="https://placehold.co/150x150/E0E0E0/333333?text=Mentor" class="w-32 h-32 rounded-full mx-auto shadow-lg">
+                    <h4 class="mt-4 font-bold text-lg">Jane Smith</h4>
+                    <p class="text-gray-500">Rover Leader</p>
+                </div>
+                <!-- Mentor Card -->
+                <div class="text-center">
+                    <img src="https://placehold.co/150x150/E0E0E0/333333?text=Mentor" class="w-32 h-32 rounded-full mx-auto shadow-lg">
+                    <h4 class="mt-4 font-bold text-lg">Peter Jones</h4>
+                    <p class="text-gray-500">Scout Leader</p>
+                </div>
+                <!-- Mentor Card -->
+                <div class="text-center">
+                    <img src="https://placehold.co/150x150/E0E0E0/333333?text=Mentor" class="w-32 h-32 rounded-full mx-auto shadow-lg">
+                    <h4 class="mt-4 font-bold text-lg">Mary Williams</h4>
+                    <p class="text-gray-500">Cub Leader</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Videos</h2>
+                <p class="text-gray-600 mt-2">Amader kichu anondomoy muhurto.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg w-full h-full"></iframe>
+                </div>
+                <div class="aspect-w-16 aspect-h-9">
+                     <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg w-full h-full"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="wavy-bg bg-[#2c3e50] text-white pt-32 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h5 class="font-bold text-lg mb-4">Crystal's Den</h5>
+                    <p class="text-gray-400">Scouting er anondo, shobar shathe.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-lg mb-4">Quick Links</h5>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="hover:text-yellow-300">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-yellow-300">Events</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-yellow-300">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-yellow-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-lg mb-4">Support</h5>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="hover:text-yellow-300">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-yellow-300">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-yellow-300">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-lg mb-4">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 8.118c-2.136 0-3.87.733-3.87 3.87s1.734 3.87 3.87 3.87 3.87-1.734 3.87-3.87S14.136 8.118 12 8.118zM12 14.158c-1.162 0-2.102-.94-2.102-2.102s.94-2.102 2.102-2.102 2.102.94 2.102 2.102-.94 2.102-2.102 2.102zm4.86-6.417a1.424 1.424 0 100-2.848 1.424 1.424 0 000 2.848z" clip-rule="evenodd" /></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Crystal's Den. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
